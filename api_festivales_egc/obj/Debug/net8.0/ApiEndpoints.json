@@ -1,0 +1,60 @@
+[
+  {
+    "ContainingType": "api_festivales_egc.Controllers.InvitationController",
+    "Method": "AcceptInvitation",
+    "RelativePath": "Invitation/accept_invitation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "api_festivales_egc.Models.InvitationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_festivales_egc.Controllers.InvitationController",
+    "Method": "GetPing",
+    "RelativePath": "Invitation/get_ping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_festivales_egc.Controllers.InvitationController",
+    "Method": "InvitationValidate",
+    "RelativePath": "Invitation/invitation_validate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "json",
+        "Type": "System.Text.Json.Nodes.JsonObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_festivales_egc.Controllers.InvitationController",
+    "Method": "RejectInvitation",
+    "RelativePath": "Invitation/reject_invitation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "api_festivales_egc.Models.InvitationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

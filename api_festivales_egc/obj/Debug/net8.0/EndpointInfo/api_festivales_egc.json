@@ -1,0 +1,217 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "api_festivales_egc",
+    "version": "1.0"
+  },
+  "paths": {
+    "/Invitation/get_ping": {
+      "get": {
+        "tags": [
+          "Invitation"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Invitation/invitation_validate": {
+      "post": {
+        "tags": [
+          "Invitation"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/JsonNode"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/JsonNode"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/JsonNode"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Invitation/accept_invitation": {
+      "post": {
+        "tags": [
+          "Invitation"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InvitationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InvitationRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/InvitationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Invitation/reject_invitation": {
+      "post": {
+        "tags": [
+          "Invitation"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InvitationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InvitationRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/InvitationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "InvitationRequest": {
+        "type": "object",
+        "properties": {
+          "festivalId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "festivalAccept": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cancelDetail": {
+            "type": "string",
+            "nullable": true
+          },
+          "establishmentName": {
+            "type": "string",
+            "nullable": true
+          },
+          "establishmentDirectorName": {
+            "type": "string",
+            "nullable": true
+          },
+          "establishmentEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "establishmentPhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "bandStyle": {
+            "type": "string",
+            "nullable": true
+          },
+          "bandNumberMembers": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nameCommanderGeneral": {
+            "type": "string",
+            "nullable": true
+          },
+          "nameSubComanderGeneral": {
+            "type": "string",
+            "nullable": true
+          },
+          "nameGeneralInstructor": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumberGeneralInstructor": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailGeneralInstructor": {
+            "type": "string",
+            "nullable": true
+          },
+          "historicalOverview": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "JsonNode": {
+        "type": "object",
+        "properties": {
+          "options": {
+            "$ref": "#/components/schemas/JsonNodeOptions"
+          },
+          "parent": {
+            "$ref": "#/components/schemas/JsonNode"
+          },
+          "root": {
+            "$ref": "#/components/schemas/JsonNode"
+          }
+        },
+        "additionalProperties": false
+      },
+      "JsonNodeOptions": {
+        "type": "object",
+        "properties": {
+          "propertyNameCaseInsensitive": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
