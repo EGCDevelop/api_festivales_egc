@@ -5,6 +5,229 @@
     "version": "1.0"
   },
   "paths": {
+    "/Festival/get_ping": {
+      "get": {
+        "tags": [
+          "Festival"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Festival/get_festival_by_filters": {
+      "get": {
+        "tags": [
+          "Festival"
+        ],
+        "parameters": [
+          {
+            "name": "festivalName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "festivalYear",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Festival/get_bands_invited_festival": {
+      "get": {
+        "tags": [
+          "Festival"
+        ],
+        "parameters": [
+          {
+            "name": "bandName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bandState",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Festival/get_invitations_festival": {
+      "get": {
+        "tags": [
+          "Festival"
+        ],
+        "parameters": [
+          {
+            "name": "isActive",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "participation",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Festival/get_detail_invitations_festival": {
+      "get": {
+        "tags": [
+          "Festival"
+        ],
+        "parameters": [
+          {
+            "name": "festivalInvitation",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "detailId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Festival/insert_festival": {
+      "post": {
+        "tags": [
+          "Festival"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FestivalRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FestivalRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FestivalRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Festival/insert_festival_invitation_band": {
+      "post": {
+        "tags": [
+          "Festival"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FestivalInvitationBandRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FestivalInvitationBandRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FestivalInvitationBandRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Festival/insert_festival_invitation": {
+      "post": {
+        "tags": [
+          "Festival"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FestivalInvitationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FestivalInvitationRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FestivalInvitationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Invitation/get_ping": {
       "get": {
         "tags": [
@@ -122,6 +345,84 @@
   },
   "components": {
     "schemas": {
+      "FestivalInvitationBandRequest": {
+        "type": "object",
+        "properties": {
+          "bandName": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FestivalInvitationRequest": {
+        "type": "object",
+        "properties": {
+          "claveInvitacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "activa": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cantidadEntradas": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "participacion": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fesId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bifId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FestivalRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "year": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ubication": {
+            "type": "string",
+            "nullable": true
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-span"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-span"
+          },
+          "entrancePrice": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
       "InvitationRequest": {
         "type": "object",
         "properties": {

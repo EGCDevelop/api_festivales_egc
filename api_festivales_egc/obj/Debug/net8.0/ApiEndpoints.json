@@ -1,5 +1,147 @@
 [
   {
+    "ContainingType": "api_festivales_egc.Controllers.FestivalController",
+    "Method": "GetBandsInvitedFestival",
+    "RelativePath": "Festival/get_bands_invited_festival",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bandName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "bandState",
+        "Type": "System.Byte",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_festivales_egc.Controllers.FestivalController",
+    "Method": "GetDetailInvitationsFestival",
+    "RelativePath": "Festival/get_detail_invitations_festival",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "festivalInvitation",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "detailId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_festivales_egc.Controllers.FestivalController",
+    "Method": "GetFestivalByFilters",
+    "RelativePath": "Festival/get_festival_by_filters",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "festivalName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "festivalYear",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_festivales_egc.Controllers.FestivalController",
+    "Method": "GetInvitationsFestival",
+    "RelativePath": "Festival/get_invitations_festival",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "isActive",
+        "Type": "System.Byte",
+        "IsRequired": false
+      },
+      {
+        "Name": "participation",
+        "Type": "System.Byte",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_festivales_egc.Controllers.FestivalController",
+    "Method": "GetPing",
+    "RelativePath": "Festival/get_ping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_festivales_egc.Controllers.FestivalController",
+    "Method": "InsertFestival",
+    "RelativePath": "Festival/insert_festival",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "api_festivales_egc.Models.FestivalRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_festivales_egc.Controllers.FestivalController",
+    "Method": "InsertFestivalInvitation",
+    "RelativePath": "Festival/insert_festival_invitation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "api_festivales_egc.Models.FestivalInvitationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_festivales_egc.Controllers.FestivalController",
+    "Method": "InsertFestivalInvitationBand",
+    "RelativePath": "Festival/insert_festival_invitation_band",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "api_festivales_egc.Models.FestivalInvitationBandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "api_festivales_egc.Controllers.InvitationController",
     "Method": "AcceptInvitation",
     "RelativePath": "Invitation/accept_invitation",

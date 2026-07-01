@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("api_festivales_egc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61d437777458b7c8bc7a7d703b07fb7732ce040f")]
 [assembly: System.Reflection.AssemblyProductAttribute("api_festivales_egc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("api_festivales_egc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -70,10 +70,10 @@ C:\Users\eosoy\OneDrive\Escritorio\Proyectos\c#\api_festivales_egc\api_festivale
 C:\Users\eosoy\OneDrive\Escritorio\Proyectos\c#\api_festivales_egc\api_festivales_egc\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\eosoy\OneDrive\Escritorio\Proyectos\c#\api_festivales_egc\api_festivales_egc\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\eosoy\OneDrive\Escritorio\Proyectos\c#\api_festivales_egc\api_festivales_egc\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\eosoy\OneDrive\Escritorio\Proyectos\c#\api_festivales_egc\api_festivales_egc\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\eosoy\OneDrive\Escritorio\Proyectos\c#\api_festivales_egc\api_festivales_egc\obj\Debug\net8.0\api_fest.B402683F.Up2Date
 C:\Users\eosoy\OneDrive\Escritorio\Proyectos\c#\api_festivales_egc\api_festivales_egc\obj\Debug\net8.0\api_festivales_egc.dll
 C:\Users\eosoy\OneDrive\Escritorio\Proyectos\c#\api_festivales_egc\api_festivales_egc\obj\Debug\net8.0\refint\api_festivales_egc.dll
 C:\Users\eosoy\OneDrive\Escritorio\Proyectos\c#\api_festivales_egc\api_festivales_egc\obj\Debug\net8.0\api_festivales_egc.pdb
 C:\Users\eosoy\OneDrive\Escritorio\Proyectos\c#\api_festivales_egc\api_festivales_egc\obj\Debug\net8.0\api_festivales_egc.genruntimeconfig.cache
 C:\Users\eosoy\OneDrive\Escritorio\Proyectos\c#\api_festivales_egc\api_festivales_egc\obj\Debug\net8.0\ref\api_festivales_egc.dll
+C:\Users\eosoy\OneDrive\Escritorio\Proyectos\c#\api_festivales_egc\api_festivales_egc\obj\Debug\net8.0\api_festivales_egc.sourcelink.json

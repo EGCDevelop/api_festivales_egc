@@ -9,8 +9,16 @@ namespace api_festivales_egc.Utils
             var value = reader[columnName];
 
             if (value == DBNull.Value)
+                return default!;
+
+            if (typeof(T) == typeof(DateOnly))
             {
-                return default(T)!;
+                return (T)(object)DateOnly.FromDateTime((DateTime)value);
+            }
+
+            if (typeof(T) == typeof(TimeOnly))
+            {
+                return (T)(object)TimeOnly.FromTimeSpan((TimeSpan)value);
             }
 
             return (T)Convert.ChangeType(value, typeof(T));
